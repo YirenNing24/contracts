@@ -32,7 +32,7 @@ abstract contract NFTMetadata is INFTMetadata {
         emit MetadataUpdate(_tokenId);
     }
 
-    /// @notice Sets the metadata URI for a given NFT.
+    /// @notice Sets the metadata URI for a given NFT Game item. Levels up the Game item on-chain
     function setTokenURI(uint256 _tokenId, string memory _uri) public virtual {
         if (!_canSetMetadata()) {
             revert NFTMetadataUnauthorized();
